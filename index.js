@@ -7,6 +7,7 @@ express()
 .get('/', (req, res) => res.send('Hello World!'))
 .post("/", (req, res) =>{
   console.log(req.body)
+  console.log(JSON.stringify(req.body))
   res.json(req.body);
 })
 
