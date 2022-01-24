@@ -3,8 +3,10 @@ const PORT = process.env.PORT || 5000
 
 
 express()
+.use(express.json())
+.get('/', (req, res) => res.send('Hello World!'))
 .post("/", (req, res) =>{
-  console.log("req.body:", req.body)
+  console.log(req.body)
   res.json(req.body);
 })
 
